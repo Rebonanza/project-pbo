@@ -21,7 +21,8 @@ public class ViewListData extends JFrame implements MouseListener, ActionListene
     KaryawanController Karyawan = new KaryawanController();
     
     JLabel ljudul = new JLabel("List Data Karyawan");
-    JButton buttonBack = new JButton("Back");    
+    JButton buttonBack = new JButton("Back");
+    JButton bTambah = new JButton("Tambah Data");    
     DefaultTableModel model;
     JTable tabel;
     DtKaryawan[] karyawan1 = new DtKaryawan[500];
@@ -69,8 +70,11 @@ public class ViewListData extends JFrame implements MouseListener, ActionListene
         this.addData();
         
         this.add(buttonBack);
-        buttonBack.setBounds(0,320,650,20);
+        buttonBack.setBounds(40,320,80,20);
         buttonBack.addActionListener(this);
+        this.add(bTambah);
+        bTambah.setBounds(150,320,120,20);
+        bTambah.addActionListener(this);
         
          
         
@@ -128,6 +132,10 @@ public class ViewListData extends JFrame implements MouseListener, ActionListene
     if (e.getSource() == buttonBack){
             Karyawan.back(this);
         }
+    if (e.getSource() == bTambah){
+            Karyawan.input(this);
+        }
     }
+
     
 }

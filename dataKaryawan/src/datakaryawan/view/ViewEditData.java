@@ -20,6 +20,7 @@ public class ViewEditData extends ViewFormData{
         super("Update Karyawan");
         this.edit = karyawan;
         super.getFnama().setText(karyawan.getNama());
+        super.getFdivisi().setText(karyawan.getDivisi());
         super.getFusia().setText(String.valueOf(karyawan.getUsia()));
         super.getFgaji().setText(String.format("%,.2f", karyawan.getGaji()));
         

@@ -23,8 +23,8 @@ public class ViewMenu extends JFrame implements ActionListener {
     JButton blihat = new JButton("Lihat Karyawan");
 
     public ViewMenu(){
-        setTitle("==Menu==");
-        setSize(180,250);
+        setTitle("Menu");
+        setSize(400,250);
         setVisible(true);
         this.setLayout(null);
         setLocationRelativeTo(null);
@@ -32,15 +32,13 @@ public class ViewMenu extends JFrame implements ActionListener {
         this.add(ljudul);
         this.add(btambah);
         this.add(blihat);
-        ljudul.setBounds(30,20, 250, 40);
-        btambah.setBounds(20, 70, 125, 60);
-        blihat.setBounds(20, 130, 125, 60);
+        ljudul.setBounds(140,20, 250, 40);
+        btambah.setBounds(40, 70, 150, 30);
+        blihat.setBounds(200, 70, 150, 30);
         
         ljudul.setFont(new Font("Arial",Font.BOLD,21));
         btambah.addActionListener(this);
         blihat.addActionListener(this);
-        btambah.setBackground(Color.pink);
-        blihat.setBackground(Color.CYAN);
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

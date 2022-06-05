@@ -19,7 +19,11 @@ public  class KaryawanController {
         list.toBack();
         list.setVisible(false);
     }
-
+    public void input(ViewListData list){
+        list.toBack();
+        ViewInputData input = new ViewInputData();
+        input.toFront();
+    }
     /* 
         fungsi Create Data Karyawan
     */

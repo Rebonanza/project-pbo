@@ -39,49 +39,53 @@ JButton buttonBack      = new JButton("Back");
     public ViewFormData(String judul) {
         
         setTitle("Form Data Karyawan");
-        setSize(300,300);
+        setSize(500,400);
         setVisible(true);
-        
+
         this.judul = judul;
         
         ljudul.setText(this.judul);
+        ljudul.setFont(new Font("Arial",Font.BOLD,20));
         
         this.setLayout(null);
+
+        fnama.setBounds(100, 60, 200, 25);
+        fdivisi.setBounds(100, 90, 200, 25);
+        fgaji.setBounds(100, 120, 200, 25);
+        fusia.setBounds(100, 150, 200, 25);
+    
+       
+        lnama.setBounds(30, 60, 50, 20);
+        ldivisi.setBounds(30, 90, 50, 20);
+        lgaji.setBounds(30, 120, 50, 20);
+        lusia.setBounds(30, 150, 50, 20);
+        ljudul.setBounds(10, 10, 250, 20);
+        
+      
+        buttonSubmit.setBounds(30, 200, 80, 25);
+        buttonReset.setBounds(115, 200, 80, 25);
+        buttonBack.setBounds(200, 200, 80, 25);    
+
         this.add(fnama);
         this.add(fdivisi);
         this.add(fgaji);
         this.add(fusia);
-        fnama.setBounds(70, 60, 130, 20);
-        fdivisi.setBounds(70, 90, 130, 20);
-        fgaji.setBounds(70, 120, 130, 20);
-        fusia.setBounds(70, 150, 130, 20);
-        
-        
         this.add(lnama);
         this.add(ldivisi);
         this.add(lgaji);
         this.add(lusia);
         this.add(ljudul);
-        lnama.setBounds(10, 60, 50, 20);
-        lnama.setBounds(10, 90, 50, 20);
-        lgaji.setBounds(10, 120, 50, 20);
-        lusia.setBounds(10, 150, 50, 20);
-        ljudul.setBounds(10, 10, 250, 20);
-        
         this.add(buttonSubmit);
         this.add(buttonReset);
         this.add(buttonBack);
-        buttonSubmit.setBounds(40, 160, 80, 25);
-        buttonReset.setBounds(125, 160, 80, 25);
-        buttonBack.setBounds(5, 200, 200, 20);      
-
         buttonSubmit.addActionListener(this);
         buttonReset.addActionListener(this);
         buttonBack.addActionListener(this);
         
-        buttonReset.setBackground(Color.RED);
-        buttonSubmit.setBackground(Color.BLUE);
-        
+        buttonReset.setBackground(Color.red);
+        buttonSubmit.setBackground(Color.green);
+        buttonReset.setForeground(Color.white);
+        buttonSubmit.setForeground(Color.white);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
