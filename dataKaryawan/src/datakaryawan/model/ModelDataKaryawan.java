@@ -64,14 +64,14 @@ public class ModelDataKaryawan {
     return data[0];
     }
     
-     public String create(DtKaryawan karyawan){
+    public String create(DtKaryawan karyawan){
          String message = "...";
          try{
                 String nama = karyawan.getNama();
                 String divisi = karyawan.getDivisi();
                 int usia = karyawan.getUsia();
                 double gaji = karyawan.getGaji();
-                String query = "INSERT INTO `karyawan`(`nama`,`divisi`, `usia`,`gaji`) VALUES ('"+nama+","+divisi+","+usia+","+gaji+")"; 
+                String query = "INSERT INTO `karyawan` VALUES(NULL,'"+nama+"','"+divisi+"','"+gaji+"','"+usia+"')";
                     connector.statement = connector.koneksi.createStatement();
                     connector.statement.executeUpdate(query); 
             message = "Berhasil Create Data";
